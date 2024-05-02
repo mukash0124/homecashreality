@@ -25,7 +25,7 @@ app.post("/email", (req, res) => {
 
   let message = {
     from: "", // sender address
-    to: "mukash.m0124@gmail.com", // list of receivers
+    to: "home.cash.reality@mail.ru", // list of receivers
     subject: req.body.name, // Subject line
     html: `
     <ul>
