@@ -43,11 +43,7 @@ app.post("/email", (req, res) => {
   transporter
     .sendMail(message)
     .then((info) => {
-      return res.status(201).json({
-        msg: "Email sent",
-        info: info.messageId,
-        preview: nodemailer.getTestMessageUrl(info),
-      });
+      return res.redirect("/");
     })
     .catch((err) => {
       return res.status(500).json({ msg: err });
